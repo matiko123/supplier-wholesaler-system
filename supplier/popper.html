@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
+    <link rel="stylesheet" href="../assets/css/vanilla-zoom.min.css">
+</head>
+
+<body>
+
+
+
+    <button class='btn btn-outline-success' data-bs-toggle="modal" data-bs-target="#popper">select</button>
+    <!--Popper starts-->  
+    <div class="modal fade" id="popper" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+         <div class="modal-dialog modal-dialog-centered" >
+           <div class="modal-content bg-dark text-white ">
+             <div class="modal-body">
+               <form >
+               <div class="mb-3">
+               <h1 class="modal-title fs-5 text-center" id="exampleModalLabel">Payment for Subscription</h1>
+                   <label for="recipient-name" class="col-form-label">Enter your phone number</label>
+                   <input type="number" class="form-control" id="recipient-name" name="months" required>
+                 </div>
+   <div style="margin-left:60%">
+               <button type="button" class="btn btn-secondary btn-sm " data-bs-dismiss="modal" aria-label="Close">CANCEL</button>
+               <button type="button" class="btn btn-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#passwordpopper" aria-label="Close">SEND</button>
+   </div>
+             </div>
+             </form>
+           </div>
+         </div>
+       </div>
+       <!--Popper ends-->
+    <!--password Popper starts-->  
+    <div class="modal fade" id="passwordpopper" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+         <div class="modal-dialog modal-dialog-centered" >
+           <div class="modal-content bg-dark text-white ">
+             <div class="modal-body">
+               <form >
+               <div class="mb-3">
+               <h1 class="modal-title fs-5 text-center" id="exampleModalLabel">Payment for Subscription</h1>
+                   <label for="recipient-name" class="col-form-label">Enter your passowrd</label>
+                   <input type="number" class="form-control" id="recipient-name" name="months" maxlength="4" title="$ digits only are required!" required>
+                 </div>
+   <div style="margin-left:60%">
+               <button type="button" class="btn btn-secondary btn-sm " data-bs-dismiss="modal" aria-label="Close">CANCEL</button>
+               <button type="button" class="btn btn-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#successpopper" >SEND</button>
+   </div>
+             </div>
+             </form>
+           </div>
+         </div>
+       </div>
+       <!-- password Popper ends-->
+         <!--Transaction complete starts-->  
+    <div class="modal fade" id="successpopper'.$plan_id.'" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+         <div class="modal-dialog modal-dialog-centered" >
+           <div class="modal-content bg-dark text-white ">
+             <div class="modal-body">
+               <div class="mb-3 text-center">
+                   <label for="recipient-name" class="col-form-label">Transaction completed Successful! </label>
+                 </div>
+   <div style="margin-left:90%">
+               <form method="post">
+               <input type="hidden" name="plan_id" value="'.$plan_id.'">
+               <input type="hidden" name="subscription" value="'.$subscribing.'">
+                <input type="hidden" name="action" value="subscription">
+               <button type="submit" class="btn btn-secondary btn-sm" >OK</button>
+   </div>
+             </div>
+             </form>
+           </div>
+         </div>
+       </div>
+       <!-- transaction complete ends-->
+             
+
+
+
+    <!--Table ends-->
+    <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
+    <script src="../assets/js/vanilla-zoom.js"></script>
+    <script src="../assets/js/theme.js"></script>
+</body>
+
+</html>
